@@ -1,7 +1,8 @@
 //your JS code here. If required.
+document.getElementById('btn').addEventListener('click', Submit);
 const promise1 = () => {
 	let text = document.getElementById("text").value;
-	let delay = document.getElementById("delay").value;
+	let delay = Number(document.getElementById("delay").value);
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 			resolve(text);
@@ -12,6 +13,5 @@ const promise1 = () => {
 async function Submit(){
 	const data = await promise1();
 	console.log(data);
-	document.getElementById("output").innerHTML = `
-	<p>${data}</p>`
+	document.getElementById("output").innerHTML = `<p>${data}</p>`
 }
