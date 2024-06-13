@@ -5,7 +5,7 @@ const promise1 = () => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 			resolve(text);
-		}, delay*1000);
+		}, delay);
 	});
 }
 
